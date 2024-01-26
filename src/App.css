@@ -45,7 +45,7 @@
 
 .product
 {
-  padding:20px;
+  padding: 20px;
   margin: 10px;
   background-color: rgb(110, 131, 240);
   width: fit-content;
@@ -67,4 +67,12 @@
   background-color: black;
   color: white;
   font-size: 20px;
+}
+
+.data
+{
+  background-color:rgb(127, 253, 211);
+  padding: 20px;
+  margin: 10px;
+  width: fit-content ;
 }
