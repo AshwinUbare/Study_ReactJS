@@ -30,10 +30,10 @@ function App() {
    let [age, setAge]= useState();
 
    let countries = [
-       {name: "India",capital:"New Delhi"},
-       {name: "USA",captial:"Washington D.C."},
-       {name: "South Frica",capital:"Cape Town"},
-       {name: "New zealand",captial:"Wellington"}
+       {name:"India",capital:"New Delhi"},
+       {name:"USA",capital:"Washington D.C."},
+       {name:"South Frica",capital:"Cape Town"},
+       {name:"New Zealand",capital:"Wellington"}
    ]
 
   return (
@@ -76,14 +76,24 @@ function App() {
           }}>Submit</button>
 
          
+         {/* Iterating array manually */}
          <div className='data'>
           <h3>{countries[0].name}</h3>
           <p>{countries[0].capital}</p>
          </div>
          
-         {
-               countries.map((country)=>{})       
-                //  return
+
+         {/* Iterating array by using loop */}
+         { 
+             //writing in '{}' are JS
+               countries.map((country)=>{     // map is iterate as mush time as a size of array (countries) i.e 4-time
+                 return(
+                  // writing in '()' is JSX and writing in '{}' are JS
+                    <div className='data'>
+                        <h3>{country.name}</h3>
+                        <p>{country.capital}</p>
+                    </div>
+               )
               })
          }
 
