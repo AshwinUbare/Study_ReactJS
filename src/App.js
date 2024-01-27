@@ -30,10 +30,10 @@ function App() {
    let [age, setAge]= useState();
 
    let countries = [
-       {name:"India",capital:"New Delhi"},
-       {name:"USA",capital:"Washington D.C."},
-       {name:"South Frica",capital:"Cape Town"},
-       {name:"New Zealand",capital:"Wellington"}
+       {id:1,name:"India",capital:"New Delhi"},  // id shuld be unique
+       {id:2,name:"USA",capital:"Washington D.C."},
+       {id:3,name:"South Frica",capital:"Cape Town"},
+       {id:4,name:"New Zealand",capital:"Wellington"}
    ]
 
   return (
@@ -86,10 +86,11 @@ function App() {
          {/* Iterating array by using loop */}
          { 
              //writing in '{}' are JS
-               countries.map((country)=>{     // map is iterate as mush time as a size of array (countries) i.e 4-time
-                 return(
+              //  countries.map((country,index)=>{     // map is iterate as mush time as a size of array (countries) i.e 4-time
+                countries.map((country)=>{ 
+                  return(
                   // writing in '()' is JSX and writing in '{}' are JS
-                    <div className='data'>
+                    <div className='data' key={country.id}>  {/* index is unike so we use it as key in map, if you have id tha use id as a key  */}
                         <h3>{country.name}</h3>
                         <p>{country.capital}</p>
                     </div>
@@ -103,5 +104,5 @@ function App() {
     
   );
 }
-
 export default App;
+
