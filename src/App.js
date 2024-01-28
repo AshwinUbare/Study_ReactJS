@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Header';
 import Products from './Products';
 import { useState } from 'react';
+import Product2 from './Product2';
 
 function App() {
 
@@ -90,7 +91,7 @@ function App() {
                 countries.map((country)=>{ 
                   return(
                   // writing in '()' is JSX and writing in '{}' are JS
-                    <div className='data' key={country.id}>  {/* index is unike so we use it as key in map, if you have id tha use id as a key  */}
+                    <div className='data' key={country}>  {/* index is unike so we use it as key in map, if you have id tha use id as a key  */}
                         <h3>{country.name}</h3>
                         <p>{country.capital}</p>
                     </div>
@@ -98,6 +99,9 @@ function App() {
               })
          }
 
+         <p>---------------------------------------------------------------------------------------------------------------</p>
+
+    <Product2/>
 
         
     </div>

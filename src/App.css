@@ -50,6 +50,13 @@
   background-color: rgb(110, 131, 240);
   width: fit-content;
 }
+.product2
+{
+    width:fit-content;
+    padding: 20px;
+    margin:10px;
+    background-color: lightgrey;
+}
 .products
 {
   width: 100%;
